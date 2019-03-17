@@ -8,7 +8,7 @@ logging.basicConfig(format='%(asctime)s: %(message)s', level=logging.INFO)
 floatType = np.csingle if config["inputBytesPerValue"] == "4" else np.complex64
 
 def getAccelTraceDFFT(inputfile):
-  accelTrace = np.fromfile(inputfile)
+  accelTrace = np.fromfile(inputfile, dtype=np.complex)
   dffTAccelTrace = np.fft.fft(accelTrace)
   return dffTAccelTrace
 
@@ -26,10 +26,12 @@ def logStatistics(values):
   logging.info('Median - %s', getMedian(values))
   logging.info('Standard Deviation - %s', getStandardDeviation(values))
 
-# def writeValuesToFile(values):
-#   np.savetxt(config['outputfile'], values, encoding='byte')
+def writeValuesToFile(values):
+  outputfile = open(config["outputfile"], "w+b")
+  np.save(outputfile, values)
+  outputfile.close()
 
 if __name__ == "__main__":
   dffTAccelTrace = getAccelTraceDFFT(config['inputfile'])
   logStatistics(dffTAccelTrace)
-  # writeValuesToFile(dffTAccelTrace)
+  writeValuesToFile(dffTAccelTrace)
