@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="35ce0241-edba-44eb-8bc2-4cba44fd5f5a" name="Default Changelist" comment="" />
+    <list default="true" id="35ce0241-edba-44eb-8bc2-4cba44fd5f5a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_getAccelTraceDFFT.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_getMean.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_getMedian.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_getStandardDeviation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
